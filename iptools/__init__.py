@@ -128,6 +128,7 @@ class IpRange (Sequence):
     :param end: Ip address in dotted quad format or ``None``.
     :type end: str
     """
+
     def __init__(self, start, end=None):
         if end is None:
             if isinstance(start, IpRange):
@@ -410,6 +411,7 @@ class IpRangeList (object):
             ``(start, end)`` tuples of ip addresses.
     :type \*args: list of str and/or tuple
     """
+
     def __init__(self, *args):
         self.ips = tuple(map(IpRange, args))
     # end __init__
